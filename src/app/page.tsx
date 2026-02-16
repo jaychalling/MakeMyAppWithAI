@@ -16,7 +16,7 @@ export default function Home() {
         </p>
         
         <Link
-          href="/learn"
+          href="/courses"
           className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors"
         >
           🚀 학습 시작하기
