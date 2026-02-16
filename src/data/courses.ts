@@ -33,48 +33,50 @@ export const COURSES: Course[] = [
         id: 1,
         title: "Node.js 다운로드",
         concept: "AI 코딩을 하려면 Node.js가 필요해요. 그냥 프로그램 하나 설치하는 거예요!",
-        mission: "nodejs.org에서 초록색 LTS 버튼 클릭 → 다운로드 → 설치 (다음다음다음...)",
-        hint: "설치할 때 모든 옵션 그냥 기본값으로 두세요. 1분이면 끝!"
+        mission: "1. 아래 링크 클릭해서 다운로드\n2. 다운받은 파일 실행\n3. Next → Next → Next → Install → Finish\n\n끝! 1분이면 돼요.",
+        code: "📥 다운로드 링크:\nhttps://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi (Windows)\nhttps://nodejs.org/dist/v20.11.0/node-v20.11.0.pkg (Mac)"
       },
       {
         id: 2,
         title: "설치 확인",
-        concept: "설치가 잘 됐는지 확인해볼게요.",
-        mission: "Windows: Win+R → 'cmd' 입력 → Enter\nMac: Cmd+Space → 'terminal' 입력 → Enter\n\n그 다음 node -v 입력하고 Enter!",
-        hint: "v20.x.x 같은 숫자가 나오면 성공! 🎉",
-        code: "node -v\n# v20.11.0 같은 버전이 나오면 OK!"
+        concept: "설치가 잘 됐는지 1초만에 확인!",
+        mission: "1. Windows: Win+R 누르고 cmd 입력 후 Enter\n   Mac: Cmd+Space 누르고 terminal 입력 후 Enter\n\n2. 열린 검은 창에 node -v 입력하고 Enter\n\n3. v20.x.x 같은 숫자 나오면 성공! 🎉",
+        code: "node -v\n# 결과 예시: v20.11.0"
       },
       {
         id: 3,
         title: "Claude Code 설치",
-        concept: "이제 AI 코딩 도구를 설치해요. 한 줄이면 끝!",
-        mission: "아까 그 검은 창에 이거 복사해서 붙여넣기:",
-        hint: "설치하는 데 1-2분 걸릴 수 있어요. 기다리세요!",
+        concept: "AI 코딩 도구 설치! 복사 붙여넣기 한 번이면 끝!",
+        mission: "아까 그 검은 창에 아래 명령어 복사해서 붙여넣고 Enter!\n\n1-2분 기다리면 설치 완료.",
         code: "npm install -g @anthropic-ai/claude-code"
       },
       {
         id: 4,
-        title: "AI와 첫 대화",
-        concept: "드디어! AI와 대화할 준비 완료!",
-        mission: "검은 창에 claude 입력하고 Enter!\n\nAPI 키 입력하라고 하면 anthropic.com에서 발급받아서 입력하세요.",
-        hint: "처음엔 API 키 설정이 필요해요. console.anthropic.com에서 만들 수 있어요.",
-        code: "claude"
+        title: "API 키 발급",
+        concept: "Claude를 쓰려면 API 키가 필요해요. 무료로 받을 수 있어요!",
+        mission: "1. 아래 링크 접속\n2. 구글/이메일로 가입\n3. API Keys 메뉴 클릭\n4. Create Key 클릭\n5. 생성된 키 복사해두기 (sk-ant-...로 시작하는 긴 문자열)",
+        code: "🔗 API 키 발급:\nhttps://console.anthropic.com/settings/keys\n\n⚠️ 키는 한 번만 보여주니까 꼭 복사해두세요!"
       },
       {
         id: 5,
-        title: "첫 번째 마법",
-        concept: "AI에게 웹페이지를 만들어달라고 해볼게요!",
-        mission: "Claude에게 이렇게 말해보세요:\n\n'간단한 자기소개 웹페이지 만들어줘. 내 이름은 [본인이름]이야'",
-        hint: "AI가 코드를 만들고 파일도 저장해줄 거예요!",
-        code: "# Claude에게:\n간단한 자기소개 웹페이지 만들어줘. 내 이름은 홍길동이야"
+        title: "AI와 첫 대화",
+        concept: "드디어 AI와 대화할 시간!",
+        mission: "1. 검은 창에 claude 입력하고 Enter\n2. API 키 입력하라고 하면 아까 복사한 키 붙여넣기\n3. 'yes' 입력해서 설정 완료",
+        code: "claude\n\n# API 키 물어보면 붙여넣기\n# 설정 완료되면 대화 시작!"
       },
       {
         id: 6,
-        title: "결과 확인!",
-        concept: "AI가 만든 웹페이지를 브라우저에서 열어봐요!",
-        mission: "생성된 index.html 파일을 더블클릭하거나 브라우저로 드래그하세요.",
-        hint: "🎉 축하해요! 방금 AI로 첫 웹페이지를 만들었어요!",
-        code: "# 파일 위치 확인\nls\n# index.html이 보이면 더블클릭!"
+        title: "첫 번째 마법! ✨",
+        concept: "AI에게 웹페이지를 만들어달라고 해볼게요!",
+        mission: "Claude에게 그대로 말하세요:\n\n'간단한 자기소개 웹페이지 만들어줘. 내 이름은 [본인이름]이야'\n\nAI가 코드를 만들고 파일도 저장해줄 거예요!",
+        code: "# 이렇게 말해보세요:\n간단한 자기소개 웹페이지 만들어줘. 내 이름은 홍길동이야"
+      },
+      {
+        id: 7,
+        title: "결과 확인! 🎉",
+        concept: "AI가 만든 웹페이지를 브라우저에서 확인!",
+        mission: "1. 파일 탐색기에서 index.html 파일 찾기\n2. 더블클릭하면 브라우저에서 열림\n\n🎉 축하해요! 방금 AI로 첫 웹페이지를 만들었어요!",
+        code: "# 파일 위치가 궁금하면 Claude에게:\n파일 어디 저장했어?"
       }
     ]
   },
@@ -92,43 +94,42 @@ export const COURSES: Course[] = [
         id: 1,
         title: "사진 추가하기",
         concept: "프로필 사진을 넣어볼게요!",
-        mission: "Claude에게: '프로필 사진 넣을 수 있게 해줘. 일단 플레이스홀더 이미지로'",
-        hint: "나중에 실제 사진으로 바꿀 수 있어요!"
+        mission: "Claude에게 그대로 말하세요:\n\n'프로필 사진 넣어줘. 일단 플레이스홀더 이미지로 해줘'\n\n(나중에 진짜 사진으로 바꿀 수 있어요)",
+        code: "# 이렇게 말하세요:\n프로필 사진 넣어줘. 일단 플레이스홀더 이미지로 해줘"
       },
       {
         id: 2,
         title: "색상 바꾸기",
-        concept: "기본 색상이 마음에 안 들면 바꿔달라고 하면 돼요!",
-        mission: "Claude에게: '배경색을 [원하는색]으로 바꿔줘' 또는 '더 모던한 느낌으로 해줘'",
-        hint: "구체적으로 말할수록 좋아요. '다크 테마로 해줘'처럼!"
+        concept: "색상이 마음에 안 들면 바꿔달라고 하면 돼요!",
+        mission: "Claude에게:\n\n'다크 테마로 바꿔줘' 또는\n'배경을 파란색 그라데이션으로 해줘' 또는\n'더 모던하게 해줘'\n\n구체적으로 말할수록 좋아요!",
+        code: "# 예시:\n다크 테마로 바꿔줘\n배경을 파란색 그라데이션으로 해줘\n글자색을 흰색으로 해줘"
       },
       {
         id: 3,
         title: "섹션 추가하기",
-        concept: "취미, 기술, 연락처 등을 추가해봐요!",
-        mission: "Claude에게: '취미 섹션이랑 연락처 섹션 추가해줘'",
-        hint: "원하는 섹션을 마음대로 요청하세요!"
+        concept: "더 많은 내용을 추가해봐요!",
+        mission: "Claude에게:\n\n'취미 섹션이랑 연락처 섹션 추가해줘'",
+        code: "# 원하는 섹션을 말하세요:\n- 자기소개\n- 취미\n- 기술 스택\n- 경력\n- 연락처\n- SNS 링크"
       },
       {
         id: 4,
         title: "애니메이션 넣기",
         concept: "움직이는 효과를 넣으면 더 멋져요!",
-        mission: "Claude에게: '호버하면 카드가 살짝 올라오는 효과 넣어줘'",
-        hint: "스크롤 애니메이션, 페이드인 등도 요청해보세요!"
+        mission: "Claude에게:\n\n'마우스 올리면 카드가 살짝 올라오는 효과 넣어줘'\n'페이지 로딩할 때 페이드인 효과 넣어줘'\n'스크롤하면 섹션이 나타나는 애니메이션 넣어줘'",
+        code: "# 애니메이션 예시:\n- 호버 효과: 마우스 올리면 반응\n- 페이드인: 서서히 나타남\n- 슬라이드: 옆에서 들어옴"
       },
       {
         id: 5,
         title: "반응형으로 만들기",
-        concept: "핸드폰에서도 잘 보이게 만들어요!",
-        mission: "Claude에게: '모바일에서도 잘 보이게 반응형으로 해줘'",
-        hint: "브라우저 창 크기를 줄여서 확인해보세요!"
+        concept: "핸드폰에서도 잘 보이게!",
+        mission: "Claude에게:\n\n'모바일에서도 잘 보이게 반응형으로 해줘'\n\n확인 방법: 브라우저 창 크기를 줄여보거나 F12 → 모바일 아이콘 클릭",
+        code: "# 확인 방법:\n1. 브라우저 창 크기 줄이기\n2. 또는 F12 → 📱 아이콘 클릭"
       },
       {
         id: 6,
         title: "완성! 🎉",
         concept: "멋진 자기소개 페이지가 완성됐어요!",
-        mission: "최종 결과물을 브라우저에서 확인하고, 마음에 안 드는 부분은 계속 수정 요청하세요!",
-        hint: "AI와 대화하면서 계속 개선할 수 있어요. 이게 AI 코딩의 힘!"
+        mission: "마음에 안 드는 부분 있으면 계속 수정 요청하세요!\n\n'폰트 더 크게 해줘'\n'여백 좀 줄여줘'\n'색상 좀 더 밝게'\n\nAI와 대화하면서 무한히 개선할 수 있어요!"
       }
     ]
   },
@@ -145,38 +146,35 @@ export const COURSES: Course[] = [
       {
         id: 1,
         title: "Vercel 가입",
-        concept: "무료로 웹사이트를 인터넷에 올릴 수 있는 서비스예요!",
-        mission: "vercel.com 접속 → Sign Up → GitHub로 가입 (없으면 이메일로)",
-        hint: "GitHub 계정이 없어도 이메일로 가입할 수 있어요!"
+        concept: "무료로 웹사이트를 인터넷에 올릴 수 있는 서비스!",
+        mission: "1. 아래 링크 클릭\n2. Sign Up 클릭\n3. Continue with GitHub (또는 Continue with Email)\n4. 가입 완료!",
+        code: "🔗 Vercel 가입:\nhttps://vercel.com/signup"
       },
       {
         id: 2,
         title: "프로젝트 업로드",
-        concept: "만든 파일을 Vercel에 올려요!",
-        mission: "Vercel 대시보드 → Add New → Project → 'Browse' 클릭 → 폴더 선택",
-        hint: "index.html이 있는 폴더를 통째로 선택하세요!"
+        concept: "만든 파일을 Vercel에 드래그앤드롭!",
+        mission: "1. Vercel 대시보드에서 'Add New...' 클릭\n2. 'Project' 선택\n3. 'Import Third-Party Git Repository' 아래 'browse' 클릭\n4. index.html 있는 폴더 통째로 선택\n5. 또는 그냥 폴더를 드래그해서 놓기!",
+        code: "📂 업로드할 폴더:\nindex.html이 있는 폴더 전체를 선택하세요"
       },
       {
         id: 3,
         title: "배포하기",
-        concept: "Deploy 버튼만 누르면 끝!",
-        mission: "설정은 기본값 그대로 두고 Deploy 클릭!",
-        hint: "1-2분 기다리면 배포 완료!"
+        concept: "Deploy 버튼 한 번이면 끝!",
+        mission: "1. 설정은 건드리지 말고 그대로 두기\n2. 'Deploy' 버튼 클릭\n3. 1-2분 기다리기\n4. 완료!"
       },
       {
         id: 4,
-        title: "내 URL 확인!",
-        concept: "축하해요! 이제 전 세계 누구나 볼 수 있어요!",
-        mission: "배포 완료되면 URL이 나와요. 클릭해서 확인하고, 친구한테 보내보세요!",
-        hint: "your-project.vercel.app 같은 주소가 생겨요!",
-        code: "# 예시 URL\nhttps://my-portfolio-abc123.vercel.app"
+        title: "내 URL 확인! 🎉",
+        concept: "축하해요! 전 세계 누구나 볼 수 있어요!",
+        mission: "배포 완료되면 URL이 나와요!\n\n예: https://my-portfolio-abc123.vercel.app\n\n이 링크를 친구한테 보내보세요!",
+        code: "🔗 내 URL 예시:\nhttps://my-portfolio-abc123.vercel.app\n\n카카오톡, 인스타 바이오에 넣어보세요!"
       },
       {
         id: 5,
-        title: "커스텀 도메인 (선택)",
-        concept: "원하면 나만의 도메인을 연결할 수 있어요!",
-        mission: "Settings → Domains에서 커스텀 도메인 추가 가능 (유료)",
-        hint: "지금은 무료 URL로도 충분해요! 나중에 해도 됩니다."
+        title: "업데이트 방법",
+        concept: "수정하고 다시 올리는 방법!",
+        mission: "파일 수정한 후:\n1. Vercel 대시보드 → 프로젝트 클릭\n2. Deployments 탭\n3. 'Redeploy' 또는 새로 업로드\n\n(나중에 GitHub 연결하면 자동으로 됨!)"
       }
     ]
   },
@@ -195,50 +193,48 @@ export const COURSES: Course[] = [
         id: 1,
         title: "새 프로젝트 시작",
         concept: "이번엔 좀 더 복잡한 앱을 만들어봐요!",
-        mission: "새 폴더 만들고 Claude 실행:\n\n'할일 관리 앱 만들어줘. 할일 추가, 완료 체크, 삭제 기능 필요해'",
-        hint: "Claude가 여러 파일을 만들 수도 있어요!"
+        mission: "1. 새 폴더 만들기 (예: my-todo)\n2. 터미널에서 그 폴더로 이동: cd my-todo\n3. Claude 실행: claude\n4. 아래처럼 요청:",
+        code: "# Claude에게:\n할일 관리 앱 만들어줘.\n- 할일 추가\n- 완료 체크\n- 삭제 기능\n예쁘게 해줘"
       },
       {
         id: 2,
-        title: "기본 기능 확인",
-        concept: "만들어진 앱을 테스트해봐요!",
-        mission: "브라우저에서 열고 할일 추가, 체크, 삭제 테스트",
-        hint: "버그가 있으면 Claude에게 말해서 고치세요!"
+        title: "기본 기능 테스트",
+        concept: "만들어진 앱이 잘 동작하는지 확인!",
+        mission: "1. index.html 더블클릭해서 브라우저에서 열기\n2. 할일 추가해보기\n3. 체크 눌러보기\n4. 삭제해보기\n\n버그 있으면 Claude에게 '여기 안 돼, 고쳐줘' 하면 됨!"
       },
       {
         id: 3,
         title: "저장 기능 추가",
-        concept: "새로고침해도 데이터가 유지되게!",
-        mission: "Claude에게: '새로고침해도 할일이 저장되게 localStorage 사용해줘'",
-        hint: "localStorage는 브라우저에 데이터를 저장하는 방법이에요"
+        concept: "새로고침해도 데이터 유지!",
+        mission: "Claude에게:\n\n'새로고침해도 할일이 저장되게 해줘'",
+        code: "# Claude에게:\n새로고침해도 할일이 저장되게 해줘.\nlocalStorage 사용해."
       },
       {
         id: 4,
         title: "다크 모드",
-        concept: "눈이 편한 다크 모드를 추가해요!",
-        mission: "Claude에게: '다크모드 토글 버튼 추가해줘'",
-        hint: "다크모드 설정도 저장되게 해달라고 하세요!"
+        concept: "눈이 편한 다크 모드!",
+        mission: "Claude에게:\n\n'다크모드 토글 버튼 추가해줘. 설정도 저장되게 해줘'",
+        code: "# Claude에게:\n다크모드 토글 버튼 추가해줘.\n설정도 localStorage에 저장해서 유지되게."
       },
       {
         id: 5,
-        title: "카테고리 기능",
-        concept: "할일을 분류할 수 있게!",
-        mission: "Claude에게: '할일에 카테고리 추가할 수 있게 해줘. 예: 업무, 개인, 쇼핑'",
-        hint: "필터 기능도 같이 요청해보세요!"
+        title: "카테고리 & 필터",
+        concept: "할일을 분류하고 필터링!",
+        mission: "Claude에게:\n\n'할일에 카테고리 추가해줘 (업무/개인/쇼핑). 카테고리별로 필터링도 되게 해줘'",
+        code: "# Claude에게:\n카테고리 기능 추가해줘.\n- 업무, 개인, 쇼핑 카테고리\n- 카테고리별 필터 버튼"
       },
       {
         id: 6,
-        title: "마감일 추가",
-        concept: "언제까지 해야 하는지 설정!",
-        mission: "Claude에게: '마감일 설정하고, 마감 임박하면 빨간색으로 표시해줘'",
-        hint: "정렬 기능도 추가하면 좋아요!"
+        title: "마감일 & 알림",
+        concept: "언제까지? 긴급한 건 빨간색!",
+        mission: "Claude에게:\n\n'마감일 설정 기능 추가해줘. 오늘이나 내일까지인 건 빨간색으로 표시해줘'",
+        code: "# Claude에게:\n마감일 기능 추가해줘.\n- 날짜 선택 가능\n- 마감 임박하면 빨간색\n- 마감일 순으로 정렬"
       },
       {
         id: 7,
-        title: "배포하기",
-        concept: "완성된 앱을 배포해요!",
-        mission: "아까처럼 Vercel에 배포하세요. 이제 어디서든 쓸 수 있어요!",
-        hint: "핸드폰에서도 접속해보세요!"
+        title: "배포하기 🚀",
+        concept: "완성! 이제 배포!",
+        mission: "3강에서 했던 것처럼 Vercel에 배포!\n\n핸드폰에서도 접속해서 써보세요. 진짜 쓸 수 있는 앱이에요!"
       }
     ]
   },
@@ -255,44 +251,41 @@ export const COURSES: Course[] = [
       {
         id: 1,
         title: "API가 뭐야?",
-        concept: "다른 서비스의 데이터를 가져오는 방법이에요! 1분이면 이해돼요.",
-        mission: "API = 데이터 자판기\n돈(요청) 넣으면 → 음료(데이터) 나옴\n\n날씨 API에 '서울' 요청 → 서울 날씨 데이터 반환!",
-        hint: "어렵게 생각하지 마세요. 그냥 데이터 가져오는 거예요!"
+        concept: "다른 서비스의 데이터를 가져오는 방법!",
+        mission: "API = 데이터 자판기라고 생각하세요.\n\n요청 보내면 → 데이터 받음\n'서울 날씨 알려줘' → {온도: 15도, 상태: 맑음}\n\n그냥 데이터 가져오는 거예요!"
       },
       {
         id: 2,
         title: "날씨 API 키 받기",
-        concept: "무료 날씨 API를 사용할 거예요!",
-        mission: "openweathermap.org 가입 → API Keys → 키 복사",
-        hint: "무료로 월 1000회 호출 가능해요. 충분!"
+        concept: "무료 날씨 API 키 발급!",
+        mission: "1. 아래 링크 클릭\n2. 'Sign Up' → 가입 (이메일 확인 필요)\n3. 로그인 후 'API Keys' 메뉴\n4. 키 복사 (영문+숫자 긴 문자열)",
+        code: "🔗 날씨 API 가입:\nhttps://home.openweathermap.org/users/sign_up\n\n🔗 API 키 확인:\nhttps://home.openweathermap.org/api_keys\n\n⏰ 가입 후 키 활성화까지 10분~2시간 걸릴 수 있음"
       },
       {
         id: 3,
         title: "날씨 앱 만들기",
         concept: "Claude에게 API 키와 함께 요청!",
-        mission: "Claude에게: '이 API 키로 날씨 앱 만들어줘: [키]. 도시 검색하면 날씨 보여주는 거'",
-        hint: "API 키는 비밀이에요! 공개하면 안 돼요"
+        mission: "새 폴더에서 Claude 실행 후:",
+        code: "# Claude에게:\n날씨 앱 만들어줘.\n- OpenWeatherMap API 사용\n- API 키: [여기에 복사한 키 붙여넣기]\n- 도시 검색하면 날씨 보여주기\n- 온도, 습도, 날씨 상태 표시"
       },
       {
         id: 4,
         title: "예쁘게 꾸미기",
-        concept: "날씨에 따라 배경이 바뀌면 멋지겠죠?",
-        mission: "Claude에게: '맑으면 파란 배경, 비오면 회색 배경, 날씨 아이콘도 넣어줘'",
-        hint: "애니메이션도 추가해보세요!"
+        concept: "날씨에 따라 배경이 바뀌게!",
+        mission: "Claude에게:",
+        code: "# Claude에게:\n- 맑으면 파란 배경 + ☀️\n- 흐리면 회색 배경 + ☁️  \n- 비오면 어두운 배경 + 🌧️\n- 날씨 아이콘 크게 표시"
       },
       {
         id: 5,
         title: "현재 위치 날씨",
-        concept: "내 위치를 자동으로 감지!",
-        mission: "Claude에게: '현재 위치 자동 감지해서 날씨 보여주는 기능 추가해줘'",
-        hint: "브라우저가 위치 권한을 물어볼 거예요"
+        concept: "내 위치 자동 감지!",
+        mission: "Claude에게:\n\n'페이지 열면 현재 위치 날씨 자동으로 보여줘'\n\n(브라우저가 위치 권한 물어보면 '허용' 클릭)"
       },
       {
         id: 6,
         title: "5일 예보",
-        concept: "오늘만 말고 앞으로의 날씨도!",
-        mission: "Claude에게: '5일 예보도 보여줘'",
-        hint: "OpenWeatherMap 5day forecast API 사용!"
+        concept: "앞으로의 날씨도!",
+        mission: "Claude에게:\n\n'5일 예보도 아래에 보여줘. 날짜별로 카드 형태로'\n\n배포해서 친구들한테 자랑하세요!"
       }
     ]
   },
@@ -363,52 +356,52 @@ export const COURSES: Course[] = [
     steps: [
       {
         id: 1,
-        title: "Claude API 키 받기",
-        concept: "Claude를 내 앱에서 쓰려면 API 키가 필요해요!",
-        mission: "console.anthropic.com → API Keys → Create Key → 복사",
-        hint: "API 사용량에 따라 비용이 발생할 수 있어요"
+        title: "Claude API 키 발급",
+        concept: "내 앱에서 Claude를 쓰려면 API 키가 필요!",
+        mission: "1강에서 발급받은 키를 사용하거나, 새로 발급:",
+        code: "🔗 API 키 발급:\nhttps://console.anthropic.com/settings/keys\n\n1. Create Key 클릭\n2. 키 복사 (sk-ant-...)\n\n💰 무료 크레딧으로 시작 가능\n사용량에 따라 비용 발생"
       },
       {
         id: 2,
         title: "챗봇 UI 만들기",
-        concept: "채팅 인터페이스를 만들어요!",
-        mission: "Claude에게: '채팅 UI 만들어줘. 입력창, 전송 버튼, 대화 목록 필요해'",
-        hint: "카카오톡이나 iMessage 같은 느낌으로!"
+        concept: "카카오톡 같은 채팅 화면!",
+        mission: "새 폴더에서 Claude 실행 후:",
+        code: "# Claude에게:\n채팅 UI 만들어줘.\n- 메시지 입력창\n- 전송 버튼\n- 대화 목록 (내 메시지는 오른쪽, AI는 왼쪽)\n- 다크 테마\n- 카카오톡 느낌으로"
       },
       {
         id: 3,
         title: "API 연결",
-        concept: "UI와 Claude API를 연결!",
-        mission: "Claude에게: 'Claude API 연결해줘. API 키: [키]. 메시지 보내면 응답 받아서 표시'",
-        hint: "백엔드 없이 클라이언트에서 직접 호출할 수도 있어요"
+        concept: "UI와 Claude API 연결!",
+        mission: "Claude에게:",
+        code: "# Claude에게:\nClaude API 연결해줘.\n- API 키: [여기에 키 붙여넣기]\n- 메시지 보내면 Claude한테 전달\n- 응답 받아서 화면에 표시"
       },
       {
         id: 4,
-        title: "대화 기록 유지",
+        title: "대화 맥락 유지",
         concept: "이전 대화를 기억하게!",
-        mission: "Claude에게: '이전 대화 맥락 유지해서 대화가 이어지게 해줘'",
-        hint: "messages 배열에 이전 대화를 포함해서 보내요"
+        mission: "Claude에게:\n\n'이전 대화 내용도 기억해서 맥락이 이어지게 해줘'\n\n(예: '아까 말한 그거' 같은 질문도 이해하게)",
+        code: "# Claude에게:\n대화 맥락 유지해줘.\n이전 메시지들도 API에 함께 보내서\n대화가 자연스럽게 이어지게."
       },
       {
         id: 5,
         title: "캐릭터 설정",
-        concept: "챗봇에 성격을 부여해요!",
-        mission: "Claude에게: '시스템 프롬프트로 챗봇 성격 설정하는 기능 추가해줘'",
-        hint: "예: '친근한 한국어 선생님', '츤데레 캐릭터' 등"
+        concept: "챗봇에 성격 부여!",
+        mission: "Claude에게:\n\n'챗봇 성격 선택하는 드롭다운 추가해줘'",
+        code: "# 캐릭터 예시:\n- 친근한 친구\n- 전문 상담사\n- 츤데레 캐릭터\n- 영어 선생님\n- 요리사"
       },
       {
         id: 6,
         title: "스트리밍 응답",
-        concept: "글자가 하나씩 나타나게!",
-        mission: "Claude에게: '응답이 스트리밍으로 한 글자씩 나타나게 해줘'",
-        hint: "ChatGPT처럼 타이핑 효과!"
+        concept: "ChatGPT처럼 타이핑 효과!",
+        mission: "Claude에게:\n\n'응답이 한 글자씩 나타나게 스트리밍으로 해줘'",
+        code: "# Claude에게:\n스트리밍 응답 구현해줘.\n글자가 하나씩 타이핑되는 것처럼\nChatGPT 느낌으로"
       },
       {
         id: 7,
-        title: "배포하기",
+        title: "배포하기 🚀",
         concept: "친구들도 쓸 수 있게!",
-        mission: "Vercel에 배포! (API 키는 환경 변수로 설정)",
-        hint: "API 키를 코드에 직접 넣으면 안 돼요!"
+        mission: "⚠️ 중요: API 키는 코드에 직접 넣으면 안 됨!\n\n1. Vercel에서 Environment Variables에 키 저장\n2. 코드에서는 process.env.API_KEY로 사용",
+        code: "# Vercel 환경변수 설정:\n1. Vercel 대시보드 → Settings\n2. Environment Variables\n3. ANTHROPIC_API_KEY = [키값]\n4. 재배포"
       }
     ]
   },
@@ -424,45 +417,45 @@ export const COURSES: Course[] = [
     steps: [
       {
         id: 1,
-        title: "이미지 API 선택",
-        concept: "DALL-E, Stable Diffusion 등 여러 옵션이 있어요!",
-        mission: "OpenAI API 사용할 거예요. platform.openai.com → API Keys → 키 발급",
-        hint: "무료 크레딧이 있을 수도 있어요!"
+        title: "OpenAI API 키 발급",
+        concept: "DALL-E를 쓰려면 OpenAI API 키가 필요!",
+        mission: "1. 아래 링크에서 가입/로그인\n2. Create new secret key 클릭\n3. 키 복사 (sk-...)",
+        code: "🔗 OpenAI API 키 발급:\nhttps://platform.openai.com/api-keys\n\n💰 신규 가입시 $5 무료 크레딧\n이미지 1장당 약 $0.02-0.04"
       },
       {
         id: 2,
-        title: "기본 UI 만들기",
+        title: "이미지 생성 앱 만들기",
         concept: "프롬프트 입력 → 이미지 생성!",
-        mission: "Claude에게: '이미지 생성 앱 만들어줘. 텍스트 입력하면 DALL-E로 이미지 생성'",
-        hint: "API 키도 같이 알려주세요"
+        mission: "새 폴더에서 Claude 실행 후:",
+        code: "# Claude에게:\nAI 이미지 생성 앱 만들어줘.\n- OpenAI DALL-E API 사용\n- API 키: [여기에 키]\n- 텍스트 입력창\n- 생성 버튼\n- 결과 이미지 표시"
       },
       {
         id: 3,
         title: "로딩 상태",
-        concept: "이미지 생성은 시간이 좀 걸려요!",
-        mission: "Claude에게: '생성 중일 때 로딩 애니메이션 보여줘'",
-        hint: "스피너나 프로그레스 바!"
+        concept: "이미지 생성은 10-20초 걸림!",
+        mission: "Claude에게:\n\n'생성 중일 때 로딩 스피너 보여주고, 버튼 비활성화해줘'",
+        code: "# Claude에게:\n로딩 상태 추가해줘.\n- 생성 중이면 스피너 애니메이션\n- 버튼 비활성화\n- '생성 중...' 텍스트"
       },
       {
         id: 4,
         title: "이미지 다운로드",
-        concept: "생성된 이미지를 저장!",
-        mission: "Claude에게: '이미지 다운로드 버튼 추가해줘'",
-        hint: "PNG로 저장하면 좋아요"
+        concept: "생성된 이미지 저장!",
+        mission: "Claude에게:\n\n'이미지 아래에 다운로드 버튼 추가해줘. PNG로 저장되게'",
+        code: "# Claude에게:\n다운로드 버튼 추가해줘.\n- 클릭하면 이미지 PNG로 저장\n- 파일명은 'ai-art-날짜.png'"
       },
       {
         id: 5,
         title: "갤러리 기능",
-        concept: "생성한 이미지들을 모아보기!",
-        mission: "Claude에게: '생성한 이미지들 갤러리로 보여주고 localStorage에 저장해줘'",
-        hint: "이미지 URL을 저장하면 돼요"
+        concept: "생성한 이미지들 모아보기!",
+        mission: "Claude에게:\n\n'생성한 이미지들 갤러리로 아래에 보여줘. localStorage에 저장해서 새로고침해도 유지되게'",
+        code: "# Claude에게:\n갤러리 기능 추가해줘.\n- 생성한 이미지들 그리드로 표시\n- 클릭하면 크게 보기\n- localStorage에 저장"
       },
       {
         id: 6,
         title: "스타일 옵션",
         concept: "다양한 스타일로 생성!",
-        mission: "Claude에게: '스타일 선택 옵션 추가해줘. 사실적, 애니메이션, 유화 등'",
-        hint: "프롬프트 앞에 스타일을 붙이는 방식!"
+        mission: "Claude에게:\n\n'스타일 선택 드롭다운 추가해줘'",
+        code: "# 스타일 옵션:\n- 사실적 (photorealistic)\n- 애니메이션 (anime style)\n- 유화 (oil painting)\n- 수채화 (watercolor)\n- 픽셀아트 (pixel art)\n- 3D 렌더링"
       }
     ]
   },
@@ -548,51 +541,49 @@ export const COURSES: Course[] = [
       {
         id: 1,
         title: "Supabase 가입",
-        concept: "인증, DB를 쉽게 해주는 서비스!",
-        mission: "supabase.com → Start your project → GitHub로 가입",
-        hint: "무료 플랜으로 충분해요!"
+        concept: "인증 + DB를 한 번에 해주는 서비스!",
+        mission: "1. 아래 링크 클릭\n2. Start your project\n3. GitHub로 가입 (가장 빠름)",
+        code: "🔗 Supabase 가입:\nhttps://supabase.com/dashboard\n\n💰 무료 플랜으로 충분\n- 50,000 월간 활성 사용자\n- 500MB 데이터베이스"
       },
       {
         id: 2,
         title: "프로젝트 생성",
         concept: "Supabase에 프로젝트 만들기!",
-        mission: "New project → 이름 입력 → 비밀번호 설정 → Create",
-        hint: "비밀번호 잘 기억하세요!"
+        mission: "1. 'New project' 클릭\n2. 프로젝트 이름 입력 (예: my-app)\n3. Database Password 설정 (기억해두기!)\n4. Region: Northeast Asia (Seoul) 선택\n5. 'Create new project' 클릭\n\n2분 정도 기다리기"
       },
       {
         id: 3,
-        title: "인증 설정",
-        concept: "이메일/비밀번호 로그인 활성화!",
-        mission: "Authentication → Providers → Email 활성화",
-        hint: "Google, GitHub 로그인도 추가할 수 있어요"
+        title: "API 키 복사",
+        concept: "앱에서 쓸 키들 복사!",
+        mission: "1. Settings (톱니바퀴) 클릭\n2. API 메뉴 클릭\n3. 아래 두 개 복사해두기:",
+        code: "📋 복사할 것:\n1. Project URL: https://xxx.supabase.co\n2. anon public 키: eyJhbG... (긴 문자열)"
       },
       {
         id: 4,
         title: "앱에 연결",
-        concept: "Claude에게 Supabase 연결 요청!",
-        mission: "Project Settings → API에서 URL과 anon key 복사\n\nClaude에게: 'Supabase로 회원가입/로그인 만들어줘. URL: [URL], Key: [Key]'",
-        hint: "키는 비밀이에요!"
+        concept: "Claude에게 Supabase 연결!",
+        mission: "새 폴더에서 Claude 실행 후:",
+        code: "# Claude에게:\nSupabase로 회원가입/로그인 만들어줘.\n- URL: [복사한 URL]\n- Key: [복사한 anon 키]\n\n기능:\n- 이메일/비밀번호 회원가입\n- 로그인\n- 로그아웃\n- 로그인 상태 표시"
       },
       {
         id: 5,
         title: "회원가입 테스트",
         concept: "실제로 가입해보기!",
-        mission: "회원가입 → 이메일 확인 → 로그인 테스트",
-        hint: "Supabase 대시보드에서 사용자 확인 가능!"
+        mission: "1. 앱에서 회원가입 (아무 이메일로)\n2. 이메일 확인 (확인 메일 옴)\n3. 로그인 테스트\n\nSupabase 대시보드 → Authentication에서 사용자 확인 가능!"
       },
       {
         id: 6,
-        title: "로그인 상태 표시",
-        concept: "로그인했으면 다르게 보여주기!",
-        mission: "Claude에게: '로그인 안 했으면 로그인 버튼, 했으면 프로필이랑 로그아웃 버튼 보여줘'",
-        hint: "조건부 렌더링!"
+        title: "로그인 상태 UI",
+        concept: "로그인 여부에 따라 다르게!",
+        mission: "Claude에게:\n\n'로그인 안 했으면 로그인/회원가입 버튼, 로그인 했으면 사용자 이메일이랑 로그아웃 버튼 보여줘'",
+        code: "# Claude에게:\n로그인 상태에 따라 UI 바꿔줘.\n- 비로그인: 로그인/회원가입 버튼\n- 로그인: 환영 메시지 + 로그아웃 버튼"
       },
       {
         id: 7,
         title: "보호된 페이지",
         concept: "로그인해야만 볼 수 있는 페이지!",
-        mission: "Claude에게: '대시보드 페이지는 로그인해야만 접근할 수 있게 해줘'",
-        hint: "리다이렉트 처리도 해달라고 하세요"
+        mission: "Claude에게:\n\n'대시보드 페이지 만들어줘. 로그인 안 하면 접근 못하고 로그인 페이지로 이동시켜'",
+        code: "# Claude에게:\n/dashboard 페이지 만들어줘.\n- 로그인 안 했으면 /login으로 리다이렉트\n- 로그인 했으면 대시보드 내용 표시"
       }
     ]
   },
@@ -610,50 +601,50 @@ export const COURSES: Course[] = [
         id: 1,
         title: "Stripe 가입",
         concept: "전 세계에서 쓰는 결제 서비스!",
-        mission: "stripe.com → Create account → 정보 입력",
-        hint: "테스트 모드로 먼저 개발해요"
+        mission: "1. 아래 링크 클릭\n2. Create account\n3. 이메일 인증",
+        code: "🔗 Stripe 가입:\nhttps://dashboard.stripe.com/register\n\n💰 테스트 모드로 먼저 개발\n실제 결제 전까지 무료"
       },
       {
         id: 2,
         title: "API 키 확인",
-        concept: "테스트용 키를 사용해요!",
-        mission: "Developers → API keys → 테스트 키 복사 (pk_test_... / sk_test_...)",
-        hint: "test가 붙은 키는 실제 결제 안 돼요!"
+        concept: "테스트용 키 복사! (실제 결제 안 됨)",
+        mission: "1. Developers 메뉴 클릭\n2. API keys 클릭\n3. 테스트 키 복사 (test가 붙은 것!)",
+        code: "📋 복사할 것:\n- Publishable key: pk_test_...\n- Secret key: sk_test_...\n\n⚠️ test가 붙은 키는 실제 결제 안 됨!"
       },
       {
         id: 3,
         title: "상품 만들기",
-        concept: "팔 상품/구독을 정의!",
-        mission: "Products → Add product → 이름, 가격 설정",
-        hint: "1회성 결제 vs 구독 선택 가능"
+        concept: "팔 상품/구독 정의!",
+        mission: "1. Products 메뉴 클릭\n2. Add product\n3. 이름, 가격 입력\n4. 저장 후 Price ID 복사 (price_...)",
+        code: "📦 상품 예시:\n- 이름: Pro Plan\n- 가격: $10/월 (구독) 또는 $50 (1회)\n\n저장 후 price_xxx ID 복사!"
       },
       {
         id: 4,
         title: "결제 버튼 추가",
-        concept: "Claude에게 Stripe Checkout 연동!",
-        mission: "Claude에게: 'Stripe Checkout으로 결제 버튼 만들어줘. 가격 ID: [price_xxx]'",
-        hint: "Stripe Checkout이 제일 쉬워요"
+        concept: "Stripe Checkout이 제일 쉬움!",
+        mission: "Claude에게:",
+        code: "# Claude에게:\nStripe Checkout 결제 버튼 만들어줘.\n- Publishable key: [pk_test_키]\n- Secret key: [sk_test_키]\n- Price ID: [price_xxx]\n\n결제 버튼 누르면 Stripe 결제 페이지로 이동"
       },
       {
         id: 5,
         title: "테스트 결제",
         concept: "가짜 카드로 테스트!",
-        mission: "카드번호: 4242 4242 4242 4242\n만료: 아무 미래 날짜\nCVC: 아무 숫자",
-        hint: "이 카드는 테스트용이라 실제 결제 안 돼요!"
+        mission: "결제 페이지에서 아래 정보 입력:",
+        code: "🧪 테스트 카드 정보:\n카드번호: 4242 4242 4242 4242\n만료일: 아무 미래 날짜 (예: 12/30)\nCVC: 아무 3자리 (예: 123)\n\n이 카드는 테스트용이라 실제 결제 안 됨!"
       },
       {
         id: 6,
         title: "결제 완료 처리",
         concept: "결제 성공하면 어떻게 할지!",
-        mission: "Claude에게: '결제 완료되면 success 페이지로 이동하고 DB에 기록해줘'",
-        hint: "Webhook으로 더 확실하게 처리할 수 있어요"
+        mission: "Claude에게:\n\n'결제 성공하면 /success 페이지로 이동하고, 감사 메시지 보여줘'",
+        code: "# Claude에게:\n결제 완료 처리해줘.\n- 성공: /success 페이지로 이동\n- 취소: /cancel 페이지로 이동\n- success 페이지에 '결제 감사합니다' 메시지"
       },
       {
         id: 7,
         title: "실제 결제 전환",
         concept: "준비되면 라이브 모드로!",
-        mission: "Stripe 대시보드에서 Live 모드로 전환, API 키 교체",
-        hint: "사업자 등록이 필요할 수 있어요"
+        mission: "실제 서비스 준비되면:\n1. Stripe 대시보드에서 'Test mode' 끄기\n2. Live API 키로 교체\n3. 사업자 등록 필요할 수 있음",
+        code: "🚀 라이브 전환 체크리스트:\n- [ ] 사업자 등록\n- [ ] Stripe 계정 인증\n- [ ] Live 키로 교체\n- [ ] 실제 카드로 테스트"
       }
     ]
   },
